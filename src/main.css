@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@layer base {
+  body {
+    @apply font-[Roboto];
+  }
+  li {
+    @apply px-4;
+    @apply cursor-pointer;
+  }
+}
+
+.content-div{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 250px;
+}
+.content-div:hover{
+  background-image: linear-gradient(
+    to right,
+    rgb(2, 27, 45),
+    rgb(3, 37, 57)
+  )!important;
+}
