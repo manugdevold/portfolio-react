@@ -13,8 +13,8 @@ const Contact = () => {
           <p className='text-2xl py-4'>Submit the form below or send me an email to <span className='font-bold text-[#1481BA]'>manug24696@gmail.com</span></p>
         </div>
         <div className='flex flex-col max-w-[600px] m-auto w-full'>
-          <input className='p-3 bg-[#063A51] rounded-md focus:outline-none focus:ring' required type='text' placeholder='Name' name='name' />
-          <input className='my-4 p-3 bg-[#063A51] rounded-md focus:outline-none focus:ring' required type='email' placeholder='Email' name='email' />
+          <input className='p-3 bg-[#063A51] rounded-md focus:outline-none focus:ring' required type='text' placeholder='Name' name='name' pattern='/[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,25}+[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,25}+[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,25}/' />
+          <input className='my-4 p-3 bg-[#063A51] rounded-md focus:outline-none focus:ring' required type='email' placeholder='Email' name='email' pattern='^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$' />
           <textarea className='bg-[#063A51] resize-none p-3 rounded-md focus:outline-none focus:ring' required name='message' rows='10' placeholder='Message'></textarea>
           <button className='border-2 border-[#063A51] px-10 py-2 mt-8 mx-auto flex items-center rounded-md hover:bg-[#063A51] hover:shadow-lg hover:shadow-[#000D19]'>
             { !nav ? '': 
