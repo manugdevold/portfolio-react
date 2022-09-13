@@ -19,7 +19,7 @@ const Home = () => {
           <ul className='w-full h-full flex flex-wrap justify-around sm:justify-between sm:flex-row'>
             <SocialBtn bg="bg-[#1481BA]" name="LinkedIn" icon={<FaLinkedin size={30} />} link="https://www.linkedin.com/in/manugdev/" />
             <SocialBtn bg="bg-black" name="GitHub" icon={<FaGithub size={30} />} link="https://github.com/manugdev" />
-            <SocialBtn bg="bg-[#3F51B5]" name="Resume" icon={<BsFillPersonLinesFill size={30} />} link="https://rxresu.me/r/VQQL6ngJ" />
+            <SocialBtn bg="bg-[#3F51B5]" name="Resume" icon={<BsFillPersonLinesFill size={30} />} link="https://mnf.red/manugdev" />
           </ul>
         </div>
       </div>
