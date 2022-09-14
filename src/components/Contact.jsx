@@ -58,19 +58,43 @@ const Contact = () => {
       });
       return;
     }
+    
+    const formData = new FormData();
+    Object.entries(values).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
 
-    setNav(!nav);
-    setValues({
-      name: "",
-      email: "",
-      message: ""
+    fetch("https://getform.io/f/4c6cc67b-5498-4801-a1a6-7d352a6889ab", {
+      method: "POST",
+      body: formData
     })
+
+    setNav(true);
+
+    setTimeout(() => {
+      setValues({
+        name: "",
+        email: "",
+        message: ""
+      })
+      setNav(false);
+    }, 3000);
+
+    Swal.fire({
+      title: "Thanks for contacting me.",
+      text: "I will be sending you an answer soon. Best regards!",
+      icon: "success",
+      button: "Back",
+      color: "#D1D5DB",
+      background: '#021B2D',
+      confirmButtonColor: '#063A51'
+    });
   }
 
 
   return (
     <section name='contact' className='w-full min-h-screen flex justify-center items-center p-4 mt-12 sm:mt-0 sm:h-screen'>
-      <form onSubmit={handleSubmit} method='POST' action='https://getform.io/f/4c6cc67b-5498-4801-a1a6-7d352a6889ab' className='flex flex-col max-w-[1000px] w-full'>
+      <form onSubmit={handleSubmit} className='flex flex-col max-w-[1000px] w-full'>
         <div className='pb-8'>
           <p className='text-4xl font-bold inline border-b-4 border-[#1481BA]'>Contact</p>
           <p className='text-2xl py-4'>Submit the form below or send me an email to <span className='font-bold text-[#1481BA]'>manug24696@gmail.com</span></p>
