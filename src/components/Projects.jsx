@@ -1,8 +1,8 @@
 import React from 'react'
 import ProjectItem from './ProjectItem'
-import WeatherApp from '../assets/mockups/WeatherApp.png'
-import RecipeApp from '../assets/mockups/RecipeApp.png'
-import CountryFlag from '../assets/mockups/CountryFlag.png'
+import WeatherApp from '../assets/mockups/WeatherApp.webp'
+import RecipeApp from '../assets/mockups/RecipeApp.webp'
+import CountryFlag from '../assets/mockups/CountryFlag.webp'
 
 const Projects = () => {
   return (

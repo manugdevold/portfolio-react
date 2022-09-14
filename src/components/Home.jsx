@@ -2,7 +2,7 @@ import React from 'react'
 import SocialBtn from './SocialBtn'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
-import Hi from '../assets/Hi.png'
+import Hi from '../assets/Hi.webp'
 
 const Home = () => {
   return (
