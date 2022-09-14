@@ -6,9 +6,9 @@ const Contact = () => {
   const regexName = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
   const [nav, setNav] = useState(false);
   const [values, setValues] = useState({
-    name: "",
-    email: "",
-    message: ""
+    name: '',
+    email: '',
+    message: ''
   })
 
   const handleInputChange = (e) => {
@@ -22,39 +22,39 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if(values.name === "" || values.email === "" || values.message === ""){
+    if(values.name === '' || values.email === '' || values.message === ''){
       Swal.fire({
-        title: "Fields cannot be empty.",
-        text: "You must fill out the form.",
-        icon: "error",
-        button: "Back",
-        color: "#D1D5DB",
+        title: `${!values.name ? 'Name' : !values.email ? 'Email' : 'Message'} cannot be empty.`,
+        text: 'You must fill out the form.',
+        icon: 'error',
+        button: 'Back',
+        color: '#D1D5DB',
         background: '#021B2D',
         confirmButtonColor: '#063A51'
       });
       return;
     }
-    if(values.email !== "" && !regexEmail.test(values.email)){
+    if(values.email !== '' && !regexEmail.test(values.email)){
       Swal.fire({
-        title: "Invalid email.",
-        text: "You must enter a valid email address.",
-        icon: "warning",
-        button: "Back",
-        color: "#D1D5DB",
+        title: 'Invalid email.',
+        text: 'You must enter a valid email address.',
+        icon: 'warning',
+        button: 'Back',
+        color: '#D1D5DB',
         background: '#021B2D',
-        confirmButtonColor: '#063A51'
+        confirmButtonColor: '#063A51',
       });
       return;
     }
-    if(values.name !== "" && !regexName.test(values.name)){
+    if(values.name !== '' && !regexName.test(values.name)){
       Swal.fire({
-        title: "Invalid name.",
-        text: "You must enter a valid name.",
-        icon: "warning",
-        button: "Back",
-        color: "#D1D5DB",
+        title: 'Invalid name.',
+        text: 'You must enter a valid name.',
+        icon: 'warning',
+        button: 'Back',
+        color: '#D1D5DB',
         background: '#021B2D',
-        confirmButtonColor: '#063A51'
+        confirmButtonColor: '#063A51',
       });
       return;
     }
@@ -64,28 +64,27 @@ const Contact = () => {
       formData.append(key, value);
     });
 
-    fetch("https://getform.io/f/4c6cc67b-5498-4801-a1a6-7d352a6889ab", {
-      method: "POST",
+    fetch('https://getform.io/f/4c6cc67b-5498-4801-a1a6-7d352a6889ab', {
+      method: 'POST',
       body: formData
     })
 
     setNav(true);
-
     setTimeout(() => {
       setValues({
-        name: "",
-        email: "",
-        message: ""
+        name: '',
+        email: '',
+        message: ''
       })
       setNav(false);
     }, 3000);
 
     Swal.fire({
-      title: "Thanks for contacting me.",
-      text: "I will be sending you an answer soon. Best regards!",
-      icon: "success",
-      button: "Back",
-      color: "#D1D5DB",
+      title: 'Thanks for contacting me.',
+      text: 'I will be sending you an answer soon. Best regards!',
+      icon: 'success',
+      button: 'Back',
+      color: '#D1D5DB',
       background: '#021B2D',
       confirmButtonColor: '#063A51'
     });
@@ -101,7 +100,7 @@ const Contact = () => {
         </div>
         <div className='flex flex-col max-w-[600px] m-auto w-full'>
           <input 
-            className='p-3 bg-[#063A51] rounded-md focus:outline-none focus:ring' 
+            className='p-3 bg-[#063A51] rounded-md focus:outline-none focus:ring'
             type='text' 
             name='name'
             placeholder='Name' 
