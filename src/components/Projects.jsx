@@ -13,9 +13,9 @@ const Projects = () => {
           <p className='py-6 text-2xl'>Check out some of my recent work</p>
         </div>
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8'>
-          <ProjectItem img={WeatherApp} name="Weather App" demo="https://weatherappmg.netlify.app/" code="https://github.com/manugdev/WeatherApp"/>
-          <ProjectItem img={RecipeApp} name="Recipe App" demo="https://recipe-app-manugdev.netlify.app/" code="https://github.com/manugdev/RecipeApp"/>
-          <ProjectItem img={CountryFlag} name="Country Flag" demo="https://country-flag-manugdev.netlify.app/" code="https://github.com/manugdev/country-flags" />
+          <ProjectItem img={WeatherApp} name='Weather App' demo='https://weatherappmg.netlify.app/' code='https://github.com/manugdev/WeatherApp' />
+          <ProjectItem img={RecipeApp} name='Recipe App' demo='https://recipe-app-manugdev.netlify.app/' code='https://github.com/manugdev/RecipeApp' />
+          <ProjectItem img={CountryFlag} name='Country Flag' demo='https://country-flag-manugdev.netlify.app/' code='https://github.com/manugdev/country-flags' />
         </div>
       </div>
     </section>
