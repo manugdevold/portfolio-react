@@ -3,6 +3,7 @@ import ProjectItem from './ProjectItem'
 import WeatherApp from '../assets/mockups/WeatherApp.webp'
 import RecipeApp from '../assets/mockups/RecipeApp.webp'
 import CountryFlag from '../assets/mockups/CountryFlag.webp'
+import NetflixClone from '../assets/mockups/NetflixClone.webp'
 
 const Projects = () => {
   return (
@@ -16,6 +17,7 @@ const Projects = () => {
           <ProjectItem img={WeatherApp} name='Weather App' demo='https://weatherappmg.netlify.app/' code='https://github.com/manugdev/WeatherApp' />
           <ProjectItem img={RecipeApp} name='Recipe App' demo='https://recipe-app-manugdev.netlify.app/' code='https://github.com/manugdev/RecipeApp' />
           <ProjectItem img={CountryFlag} name='Country Flag' demo='https://country-flag-manugdev.netlify.app/' code='https://github.com/manugdev/country-flags' />
+          <ProjectItem img={NetflixClone} name='Netflix Clone' demo='https://netflix-clone-manugdev-1a07e.web.app/' code='https://github.com/manugdev/netflix-clone' />
         </div>
       </div>
     </section>
